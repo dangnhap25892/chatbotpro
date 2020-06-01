@@ -15,7 +15,7 @@ if($v =="123")
 	
 }
 $input = json_decode(file_get_contents('php://input'),true);
-
+file_put_contents("text.txt", $input);
 $userID = $input['entry'][0]['messaging'][0]['sender']['id'];
 $message = $input['entry'][0]['messaging'][0]['sender']['text'];
 
