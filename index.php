@@ -10,6 +10,8 @@ if (isset($_REQUEST['hub_challenge']))
 if($v =="123")
 {
 	echo $c;
+	die();
+	
 }
 $input = json_decode(file_get_contents('php://input'),true);
 
@@ -24,23 +26,8 @@ $jsonData ="{
 	'recipient':{
 		'id': $userID
 	},
-	"messaging_type": "RESPONSE",
-  "message":{
-    "text": "Pick a color:",
-    "quick_replies":[
-      {
-        "content_type":"text",
-        "title":"Red",
-        "payload":"<POSTBACK_PAYLOAD>",
-        "image_url":"http://example.com/img/red.png"
-      },{
-        "content_type":"text",
-        "title":"Green",
-        "payload":"<POSTBACK_PAYLOAD>",
-        "image_url":"http://example.com/img/green.png"
-      }
-    ]
-  }
+	'message':{
+		'text':'hello23'
 }";
 
   $ch = curl_init($url);
