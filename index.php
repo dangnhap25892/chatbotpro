@@ -10,6 +10,7 @@ if (isset($_REQUEST['hub_challenge']))
 if($v =="123")
 {
 	echo $c;
+	die();
 	
 	
 }
@@ -28,6 +29,7 @@ $jsonData ="{
 	},
 	'message':{
 		'text':'hello23'
+		}
 }";
 
   $ch = curl_init($url);
