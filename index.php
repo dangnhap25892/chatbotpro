@@ -58,7 +58,7 @@ sendchat($token,$jsonData);
 // 		}
 // }";
 
-sendchat($token,$jsonData);
+//sendchat($token,$jsonData);
 function sendchat($token,$jsonData)
 {
 $url = "https://graph.facebook.com/v7.0/me/messages?access_token=$token";
