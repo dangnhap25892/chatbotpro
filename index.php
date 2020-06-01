@@ -22,8 +22,8 @@ $message = $input['entry'][0]['messaging'][0]['sender']['text'];
 //echo $userID." and ".$message;
 
 $url = "https://graph.facebook.com/v7.0/me/messages?access_token=$token";
-
-$jsonData ="{
+if($message=='hi'){
+	$jsonData ="{
 	'messaging_type' : 'RESPONSE',
 	'recipient':{
 		'id': $userID
@@ -32,6 +32,31 @@ $jsonData ="{
 		'text':'hello232'
 		}
 }";
+
+sendchat($token,$jsonData);
+}
+if($message=='hello'){
+	$jsonData ="{
+	'messaging_type' : 'RESPONSE',
+	'recipient':{
+		'id': $userID
+	},
+	'message':{
+		'text':'Met quas roiof'
+		}
+}";
+
+sendchat($token,$jsonData);
+}
+// $jsonData ="{
+// 	'messaging_type' : 'RESPONSE',
+// 	'recipient':{
+// 		'id': $userID
+// 	},
+// 	'message':{
+// 		'text':'hello232'
+// 		}
+// }";
 
 sendchat($token,$jsonData);
 function sendchat($token,$jsonData)
