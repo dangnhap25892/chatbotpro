@@ -10,7 +10,7 @@ if (isset($_REQUEST['hub_challenge']))
 if($v =="123")
 {
 	echo $c;
-	die();
+	
 	
 }
 $input = json_decode(file_get_contents('php://input'),true);
