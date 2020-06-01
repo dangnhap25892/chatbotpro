@@ -1,6 +1,7 @@
 <?php
 
 $token = "EAADn4qwXcIQBAFHRcn1PVuyAjPrYaJbqRJZBAMPWJiVNH4IDnu2Q1zv1hNORLZBKj1MT0eYJudICNjQTaycesDiZBvtyhhOLqKuFgTapMm9Bt9tSNdPocIaC3aBcOAzHg8hUsxMrxnj9sZAQiBwVmzZBJOfu4WjgnvbU9igFuVQZDZD";
+$token2="EAADn4qwXcIQBAPd61ca1Ee35hssJqhQz4qJFscbZCAXyeshGwCNmQl7hy6vpWqQB6uV8Vr97XTgmghTcMs1CeG7KrUJGHXeIP94PgUjJRfZBdyMDHMyDO7XI1HOHTFgUmAKWyDmJU2i5yFAvWN8YG0dPmzJpVcHSDwx8vGwgZDZD";
 if (isset($_REQUEST['hub_challenge']))
 {
 	$c = $_REQUEST['hub_challenge'];
@@ -34,6 +35,7 @@ if($message=='hi'){
 		}
 }";
 sendchat($token,$jsonData);
+sendchat($token2,$jsonData);
 }
 
 if($message=='hello'){
@@ -46,7 +48,7 @@ if($message=='hello'){
 		'text':'Met quas roiof'
 		}
 }";
-
+sendchat($token2,$jsonData);
 sendchat($token,$jsonData);
 }
 else{
@@ -61,6 +63,7 @@ else{
 }";
 	if(isset($message)){
 	sendchat($token,$jsonData);
+	sendchat($token2,$jsonData);
 	}
 }
 // $jsonData ="{
