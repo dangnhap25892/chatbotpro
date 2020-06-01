@@ -10,7 +10,7 @@ if (isset($_REQUEST['hub_challenge']))
 if($v =="123")
 {
 	echo $c;
-	die();
+	exit;
 	
 	
 }
