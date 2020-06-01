@@ -84,6 +84,7 @@ $result=json_decode($st,TRUE);
 	return $result;
 
     curl_close($ch);
+	exit;
 }
 
 
