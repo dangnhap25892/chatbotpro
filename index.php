@@ -42,7 +42,10 @@ $url = "https://graph.facebook.com/v7.0/me/messages?access_token=$token";
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
     curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-    curl_exec($ch);
+    $st=curl_exec($ch);
+$result=json_decode($st,TRUE);
+	return $result;
+
     curl_close($ch);
 }
 
