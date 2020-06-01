@@ -55,7 +55,7 @@ else{
 		'id': $userID
 	},
 	'message':{
-		'text':'chans'
+		'text':'hi".$message."'
 		}
 }";
 sendchat($token,$jsonData);
