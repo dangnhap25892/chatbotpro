@@ -22,6 +22,7 @@ $message = $input['entry'][0]['messaging'][0]['message']['text'];
 //echo $userID." and ".$message;
 
 $url = "https://graph.facebook.com/v7.0/me/messages?access_token=$token";
+
 if($message=='hi'){
 	$jsonData ="{
 	'messaging_type' : 'RESPONSE',
@@ -58,7 +59,9 @@ else{
 		'text':'hi".$message."chans".$userID."'
 		}
 }";
-sendchat($token,$jsonData);
+	if(isset($message)){
+	sendchat($token,$jsonData);
+	}
 }
 // $jsonData ="{
 // 	'messaging_type' : 'RESPONSE',
@@ -84,7 +87,7 @@ $result=json_decode($st,TRUE);
 	return $result;
 
     curl_close($ch);
-	exit;
+
 }
 
 
