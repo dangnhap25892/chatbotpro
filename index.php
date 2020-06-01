@@ -29,7 +29,7 @@ $jsonData ="{
 	}
 }";
 
-  $ch1 = curl_init($url);
+  $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
     curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
