@@ -25,7 +25,7 @@ $jsonData ="{
 		'id': $userID
 	},
 	'message':{
-		'text':'hello'
+		'text':'hello 232'
 	}
 }";
 
