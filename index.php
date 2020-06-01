@@ -32,9 +32,9 @@ if($message=='hi'){
 		'text':'hello232'
 		}
 }";
-
 sendchat($token,$jsonData);
 }
+
 if($message=='hello'){
 	$jsonData ="{
 	'messaging_type' : 'RESPONSE',
@@ -46,6 +46,18 @@ if($message=='hello'){
 		}
 }";
 
+sendchat($token,$jsonData);
+}
+else{
+	$jsonData ="{
+	'messaging_type' : 'RESPONSE',
+	'recipient':{
+		'id': $userID
+	},
+	'message':{
+		'text':'chans'
+		}
+}";
 sendchat($token,$jsonData);
 }
 // $jsonData ="{
