@@ -24,6 +24,7 @@ $message = $input['entry'][0]['messaging'][0]['sender']['text'];
 $url = "https://graph.facebook.com/v7.0/me/messages?access_token=$token";
 
 $jsonData ="{
+	'messaging_type' : 'RESPONSE',
 	'recipient':{
 		'id': $userID
 	},
